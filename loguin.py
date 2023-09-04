@@ -91,7 +91,7 @@ class Login:
 	def validar_login(self,usuario,password):
 		with sqlite3.connect(self.db_name) as conexion:
 			cursor = conexion.cursor()
-			sql = f'SELECT * FROM usuarios WHERE usuario={usuario} AND password={password}'
+			sql = f'SELECT * FROM Usuarios WHERE usuario={usuario} AND password={password}'
 			cursor.execute(sql)
 			validacion = cursor.fetchall()
 			cursor.close()
